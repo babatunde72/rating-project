@@ -67,7 +67,6 @@
 .rating-box .button-4:hover {
   background-color: #fff;
   color: hsl(25, 68%, 56%);
-  opacity: 1;
 }
 
 .rating-box .button-4:focus {
