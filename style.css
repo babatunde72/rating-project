@@ -59,28 +59,30 @@
   opacity: 0.9;
 }
 
-.rating-box button:active{
-  opacity: 0.6;
+.rating-box button:focus{
+  color: hsl(216, 15%, 26%);
+  background-color: hsl(217, 12%, 63%);
 }
 
 .rating-box .button-4:hover {
-  background-color: hsl(217, 12%, 63%);
-  color: #fff;
+  background-color: #fff;
+  color: hsl(25, 68%, 56%);
   opacity: 1;
 }
 
-.rating-box .button-4:active {
-  opacity: 0.7;
+.rating-box .button-4:focus {
+  color: #fff;
+  background-color: hsl(25, 68%, 56%);
 }
 
 .rating-box .button-5:hover {
   background-color: hsl(25, 97%, 53%);
   color: #fff;
-  opacity: 1;
 }
 
-.rating-box .button-5:active {
-  opacity: 0.7;
+.rating-box .button-5:focus {
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
 }
 
 .paragraph-1 {
