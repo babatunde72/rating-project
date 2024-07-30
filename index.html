@@ -1,67 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive rating project</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="rating-box">
-      <div class="img-div">
-        <img class="img" src="images/icon-star.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive rating project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="rating-box">
+        <div class="img-div">
+          <img class="img" src="images/icon-star.svg" />
+        </div>
+
+        <h2 class="heading-2">How did we do?</h2>
+
+        <p class="paragraph-1">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <button onclick="selectedNumber(1)">1</button>
+        <button onclick="selectedNumber(2)">2</button>
+        <button onclick="selectedNumber(3)">3</button>
+        <button class="button-4" onclick="selectedNumber(4)">4</button>
+        <button class="button-5" onclick="selectedNumber(5)">5</button>
+
+        <button class="submit-button" type="submit" onclick="openPopup()">
+          SUBMIT
+        </button>
       </div>
 
-      <h2 class="heading-2">How did we do?</h2>
-
-      <p class="paragraph-1">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-
-      <button onclick="selectedNumber(1)">1</button>
-      <button onclick="selectedNumber(2)">2</button>
-      <button onclick="selectedNumber(3)">3</button>
-      <button class="button-4" onclick="selectedNumber(4)">4</button>
-      <button class="button-5" onclick="selectedNumber(5)">5</button>
-
-      <button class="submit-button" type="submit" onclick="openPopup()">SUBMIT</button>
+      <div class="thank-you-popup" id="thank-you-popup">
+        <img class="img-2" src="images/illustration-thank-you.svg" />
+        <p class="rating-selected" id="rating-selected">
+          You need to pick a rating!
+        </p>
+        <h2 class="heading-3">Thank You!</h2>
+        <p class="appreciation">
+          We apprecaite you give the time to give a rating, if you ever need
+          more support do not hesitate to get in touch!
+        </p>
+      </div>
     </div>
 
-    <div class="thank-you-popup" id="thank-you-popup">
-      <img class="img-2" src="images/illustration-thank-you.svg">
-      <p class="rating-selected" id="rating-selected" >You need to pick a rating!</p>
-      <h2 class="heading-3">Thank You!</h2>
-      <p class="appreciation">We apprecaite you give the time to give a rating, if you ever need more support do not hesitate to get in touch!</p>
-    </div>
-    
-</div>
-
-<script>
-const popup = document.querySelector('#thank-you-popup')
-
-function selectedNumber(params) {
-  if (params === 1) {
-    document.querySelector('#rating-selected')
-      .innerHTML = `You selected ${params} out of 5`;
-  } else if (params === 2) {
-    document.querySelector('#rating-selected')
-      .innerHTML = `You selected ${params} out of 5`;
-  } else if (params === 3) {
-    document.querySelector('#rating-selected')
-      .innerHTML = `You selected ${params} out of 5`;
-  } else if (params === 4) {
-    document.querySelector('#rating-selected')
-      .innerHTML = `You selected ${params} out of 5`;
-  } else if (params === 5) {
-    document.querySelector('#rating-selected')
-      .innerHTML = `You selected ${params} out of 5`;
-  }
-}
-
-function openPopup() {
-  popup.classList.add('openPopup')
-}
-
-</script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
